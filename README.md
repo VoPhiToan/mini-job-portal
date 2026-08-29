@@ -63,3 +63,11 @@ python -m http.server 5500
 Open the frontend at [http://127.0.0.1:5500](http://127.0.0.1:5500).
 
 Swagger UI is available at [http://127.0.0.1:8002/docs](http://127.0.0.1:8002/docs).
+
+## Production
+
+- Frontend: [https://mini-job-portal.pages.dev](https://mini-job-portal.pages.dev)
+- Backend API: [https://mini-job-portal-api.onrender.com](https://mini-job-portal-api.onrender.com)
+- Swagger UI: [https://mini-job-portal-api.onrender.com/docs](https://mini-job-portal-api.onrender.com/docs)
+- Database: Supabase PostgreSQL
+- Hosting: Cloudflare Pages + Render
