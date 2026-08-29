@@ -1,0 +1,6 @@
+.auth-page { min-height: calc(100vh - 72px); display: grid; place-items: center; padding: 52px 20px; background: radial-gradient(circle at 20% 15%, #dce5ff, transparent 30%), var(--background); }
+.auth-shell { width: min(100%, 460px); }.auth-card { padding: 34px; background: white; border: 1px solid var(--border); border-radius: 22px; box-shadow: var(--shadow); }
+.auth-card h1 { margin: 8px 0 4px; font-size: 32px; letter-spacing: -1px; }.auth-card > p { margin: 0 0 25px; color: var(--text-muted); }.auth-form { display: grid; gap: 16px; }.auth-form .btn { margin-top: 4px; }
+.auth-switch { margin: 22px 0 0; color: var(--text-muted); text-align: center; }.auth-switch a { color: var(--primary); font-weight: 750; }
+.password-note { margin-top: 5px; color: var(--text-muted); font-size: 12px; }
+@media (max-width: 576px) { .auth-page { padding: 28px 14px; }.auth-card { padding: 25px 20px; } }

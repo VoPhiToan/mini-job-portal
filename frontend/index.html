@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover internships and early-career opportunities with MiniJob.">
+    <title>MiniJob — Find your next opportunity</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+    <header class="site-header" id="navbar"></header>
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">Build your career with confidence</span>
+                    <h1>Find the right opportunity for your career.</h1>
+                    <p>Explore focused roles from growing teams, compare opportunities, and apply in minutes.</p>
+                    <form id="hero-search-form" class="hero-search">
+                        <label><span>Job title or company</span><input name="search" type="search" placeholder="Python, frontend, ABC Technology"></label>
+                        <label><span>Location</span><input name="location" type="search" placeholder="Hanoi, Ho Chi Minh City"></label>
+                        <button class="btn btn-primary" type="submit">Search jobs</button>
+                    </form>
+                    <div class="hero-proof"><span>✓ Clear job details</span><span>✓ Simple applications</span><span>✓ Real-time status</span></div>
+                </div>
+                <aside class="hero-panel" aria-label="How MiniJob works">
+                    <span class="panel-label">A simpler job search</span>
+                    <div class="step"><b>01</b><div><strong>Discover</strong><span>Search roles that fit your goals.</span></div></div>
+                    <div class="step"><b>02</b><div><strong>Apply</strong><span>Submit your application instantly.</span></div></div>
+                    <div class="step"><b>03</b><div><strong>Track</strong><span>Follow every application status.</span></div></div>
+                </aside>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-heading"><div><span class="eyebrow">Fresh opportunities</span><h2>Recently posted jobs</h2></div><a class="text-link" href="jobs.html">Explore all jobs →</a></div>
+                <div id="recent-jobs" class="job-grid"><div class="loading-state">Loading recent jobs…</div></div>
+            </div>
+        </section>
+        <section class="section section-tinted">
+            <div class="container benefits-grid">
+                <article><span class="benefit-icon">01</span><h3>Focused discovery</h3><p>Filter by category, location, salary, and relevance without the noise.</p></article>
+                <article><span class="benefit-icon">02</span><h3>Transparent progress</h3><p>See pending, accepted, and rejected applications in one clear workspace.</p></article>
+                <article><span class="benefit-icon">03</span><h3>Built for momentum</h3><p>A streamlined experience that keeps your attention on the next opportunity.</p></article>
+            </div>
+        </section>
+        <section class="cta-section"><div class="container cta-card"><div><span class="eyebrow eyebrow-light">Your next step</span><h2>Ready to find work that moves you forward?</h2></div><a class="btn btn-light" href="jobs.html">Browse opportunities</a></div></section>
+    </main>
+    <footer><div class="container footer-inner"><a class="brand" href="index.html"><span>Mini</span>Job</a><p>Focused opportunities for ambitious people.</p></div></footer>
+    <div id="toast-root" class="toast-root"></div>
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/home.js"></script>
+</body>
+</html>
