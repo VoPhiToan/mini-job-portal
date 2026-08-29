@@ -2,11 +2,12 @@ from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from sqlalchemy import func, or_
-from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy.exc import IntegrityError, SQLAlchemyError
 from sqlalchemy.orm import Session, joinedload
 
 from app.database import get_db
 from app.dependencies.auth import require_admin
+from app.models.application import Application
 from app.models.category import Category
 from app.models.job import Job
 from app.schemas.job import JobCreate, JobResponse, JobUpdate
@@ -200,9 +201,24 @@ def update_job(
 def delete_job(job_id: int, db: Session = Depends(get_db)) -> Response:
     job = get_job_or_404(job_id, db)
 
+    application_exists = (
+        db.query(Application.id).filter(Application.job_id == job_id).first()
+    )
+    if application_exists:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="Cannot delete a job with existing applications",
+        )
+
     try:
         db.delete(job)
         db.commit()
+    except IntegrityError as exc:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="Cannot delete a job with existing applications",
+        ) from exc
     except SQLAlchemyError as exc:
         db.rollback()
         raise HTTPException(
