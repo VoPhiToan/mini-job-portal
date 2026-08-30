@@ -17,6 +17,11 @@ authentication, role-based authorization, automated testing, and cloud deploymen
 > The backend runs on Render's free service and may need a short cold start after
 > a period of inactivity.
 
+![Mini Job Portal job discovery](docs/screenshots/02-jobs.png)
+
+*Production job discovery with keyword, category, location, salary, sorting, and
+pagination controls.*
+
 ## Project Overview
 
 Mini Job Portal supports two user roles: candidates discover jobs and manage their
@@ -393,8 +398,48 @@ variables and are not stored in source control.
 
 ## Screenshots
 
-Production screenshots will be added in Phase 9.3. No placeholder image links are
-included, so the README does not contain broken documentation assets.
+### Job Discovery
+
+![Mini Job Portal Home](docs/screenshots/01-home.png)
+
+The production landing page introduces the candidate workflow and provides a
+focused job search entry point.
+
+![Job Detail](docs/screenshots/03-job-detail.png)
+
+Candidate-facing job details present the role, salary range, location,
+description, and application entry point.
+
+### Candidate Experience
+
+![Candidate Applications](docs/screenshots/04-candidate-applications.png)
+
+Candidates can track application status, inspect details, and withdraw a pending
+application.
+
+### Admin Experience
+
+![Admin Dashboard](docs/screenshots/05-admin-dashboard.png)
+
+The dashboard summarizes users, jobs, categories, applications, statuses, and
+recent activity.
+
+![Admin Job Management](docs/screenshots/06-admin-jobs.png)
+
+Administrators manage categories and job listings through dedicated create,
+edit, and delete controls.
+
+![Admin Applications](docs/screenshots/07-admin-applications.png)
+
+The application review workspace connects candidate, job, date, and status
+management in one view.
+
+### REST API
+
+![Swagger API Documentation](docs/screenshots/08-swagger.png)
+
+The deployed FastAPI Swagger UI exposes the REST endpoint groups and OpenAPI
+schemas without an authorization token.
 
 ## Known Limitations
 
