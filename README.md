@@ -64,6 +64,17 @@ Open the frontend at [http://127.0.0.1:5500](http://127.0.0.1:5500).
 
 Swagger UI is available at [http://127.0.0.1:8002/docs](http://127.0.0.1:8002/docs).
 
+## Automated backend tests
+
+The test suite uses an isolated in-memory SQLite database. It does not connect to
+Supabase or the deployed Render API.
+
+```powershell
+python -m pip install -r requirements-dev.txt
+pytest -v
+pytest --cov=app --cov-report=term-missing
+```
+
 ## Production
 
 - Frontend: [https://mini-job-portal.pages.dev](https://mini-job-portal.pages.dev)
